@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Hardware - AWD Mobile</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo (AWD - Vista Móvil)</h1>
+  </header>
+
+  <main class="grid">
+    <% products.forEach(p => { %>
+      <article class="card">
+        <img src="<%= p.imgLow %>" alt="<%= p.name %>" width="300" height="200">
+        <h3><%= p.name %></h3>
+        <p><strong>Precio:</strong> <%= p.price %></p>
+        <p><small><%= p.specs.cores %> | <%= p.specs.ram %></small></p>
+        <button class="btn-buy">Comprar</button>
+      </article>
+    <% }); %>
+  </main>
+</body>
+</html>

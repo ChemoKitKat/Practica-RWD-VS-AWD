@@ -1,0 +1,14 @@
+{
+  "name": "rwd-vs-awd-lab",
+  "version": "1.0.0",
+  "description": "Demostración comparativa de rendimiento entre RWD y AWD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-useragent": "^1.0.15"
+  }
+}

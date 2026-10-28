@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Hardware - AWD Desktop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Componentes (AWD - Vista Desktop)</h1>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Filtros Avanzados</h2>
+      <div class="heavy-chart-container">
+        <h3>Comparativa de Rendimiento</h3>
+        <p id="chart-render-target">Procesando gráficos...</p>
+      </div>
+    </aside>
+
+    <main class="grid">
+      <% products.forEach(p => { %>
+        <article class="card">
+          <img src="<%= p.imgHigh %>" alt="<%= p.name %>">
+          <h3><%= p.name %></h3>
+          <p><strong>Precio:</strong> <%= p.price %></p>
+          <table class="specs-table">
+            <tr><td>Núcleos:</td><td><%= p.specs.cores %></td></tr>
+            <tr><td>RAM:</td><td><%= p.specs.ram %></td></tr>
+            <tr><td>Ancho Banda:</td><td><%= p.specs.throughput %></td></tr>
+            <tr><td>Fuente:</td><td><%= p.specs.power %></td></tr>
+          </table>
+          <button class="btn-buy">Comprar</button>
+        </article>
+      <% }); %>
+    </main>
+  </div>
+
+  <script src="/js/heavy-chart.js"></script>
+</body>
+</html>
